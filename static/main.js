@@ -40,17 +40,17 @@ function createGraph(){
       .text(function(d) { return d.symbol; });
 
     //tooltip styles
-    node.append("circle")
-      .attr("r", function(d) { return d.r; })
-      .style('fill', function(d) { return color(d.symbol); })
-      .on("mouseover", function(d) {
-        tooltip.text(d.name + ": $" + d.price);
-        tooltip.style("visibility", "visible");
-      })
-      .on("mousemove", function() {
-        return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
-      })
-      .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+    // node.append("circle")
+    //   .attr("r", function(d) { return d.r; })
+    //   .style('fill', function(d) { return color(d.symbol); })
+    //   .on("mouseover", function(d) {
+    //     tooltip.text(d.name + ": $" + d.price);
+    //     tooltip.style("visibility", "visible");
+    //   })
+    //   .on("mousemove", function() {
+    //     return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
+    //   })
+    //   .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
   });
 }
 
